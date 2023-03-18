@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    networks:
+      - stereopay_network
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
+    ports:
+      - '$DB_PORT:$DB_PORT'
+
+  adminer:
+    image: adminer:4.8.1
+    depends_on:
+      - mysql
+    networks:
+      - stereopay_network
+    ports:
+      - '8080:8080'
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql
+      ADMINER_DESIGN: galkaev
+
+    # volumes:
+    #   - /data/pgadmin:/root/.pgadmin
+    env_file:
+      - .env
+
+  stereopay:
+    image: stereopay:latest
+    env_file:
+      - .env
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mysql
+    networks:
+      - stereopay_network
+
+networks:
+  stereopay_network:
+    driver: bridge
