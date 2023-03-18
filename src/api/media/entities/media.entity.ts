@@ -28,7 +28,7 @@ export class MediaEntity {
   @Column()
   url: string;
 
-  @Column('enum', { enum: StatusType })
+  @Column('enum', { enum: StatusType, default: StatusType.ACTIVE })
   status: string;
 
   @CreateDateColumn({

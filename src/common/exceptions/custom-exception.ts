@@ -11,7 +11,7 @@ export class CustomException extends HttpException {
     code: number,
     status: number,
     message: string,
-    data?: any,
+    data: any = [],
   ) {
     const customMsg = typeof err === 'string' ? err : message;
     super(customMsg, status);

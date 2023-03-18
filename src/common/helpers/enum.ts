@@ -3,11 +3,11 @@ export enum AppStatus {
 }
 
 export enum MediaType {
-  AUDIO = 'audio',
-  IMAGE = 'image',
+  AUDIO = 'AUDIO',
+  IMAGE = 'IMAGE',
 }
 
 export enum StatusType {
-  ACTIVE = 'active',
-  IN_ACTIVE = 'in_active',
+  ACTIVE = 'ACTIVE',
+  IN_ACTIVE = 'IN_ACTIVE',
 }
