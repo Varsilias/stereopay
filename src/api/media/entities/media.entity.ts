@@ -9,6 +9,7 @@ import {
 } from 'typeorm';
 
 import { MediaType, StatusType } from 'src/common/helpers/enum';
+import { Exclude } from 'class-transformer';
 
 @Entity({ name: 'media' })
 export class MediaEntity {
@@ -51,9 +52,10 @@ export class MediaEntity {
   // Nice columns for internal statistics and diagnostics
   @DeleteDateColumn({
     type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP(6)',
-    nullable: false,
+    nullable: true,
     comment: 'Entity Deleted At',
+    select: false,
   })
+  @Exclude()
   deletedAt!: Date;
 }

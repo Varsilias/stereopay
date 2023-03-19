@@ -1,9 +1,9 @@
 import { CustomException } from './custom-exception';
 import { HttpStatus } from '@nestjs/common';
 
-export class ValidationException extends CustomException {
+export class NotFoundException extends CustomException {
   constructor(
-    message = 'Validation Exception',
+    message = 'Notfound Exception',
     data: Record<string, any> | Array<string> | Array<Record<string, any>>,
     err?: any,
     code?: number,
