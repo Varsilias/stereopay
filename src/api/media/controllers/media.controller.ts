@@ -27,7 +27,7 @@ export class MediaController {
   @Get()
   async getMedia(@Query() query: QueryParamsDto) {
     const [result, count] = await this.mediaService.getMedia(query);
-    return paginateResponse([result, count], query.page, query.take);
+    return paginateResponse([result, count], query.page, query.perPage);
   }
 
   @Get('search')

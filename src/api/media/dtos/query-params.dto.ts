@@ -1,11 +1,9 @@
-import { IsNumberString, IsOptional } from 'class-validator';
+import { IsNumberString } from 'class-validator';
 
 export class QueryParamsDto {
-  @IsOptional()
   @IsNumberString()
-  take?: number;
+  perPage: number;
 
-  @IsOptional()
   @IsNumberString()
-  page?: number;
+  page: number;
 }

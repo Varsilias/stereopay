@@ -16,9 +16,11 @@ export class MediaService {
   }
 
   async getMedia(query: QueryParamsDto) {
-    const take = Number(query?.take) || 10;
-    const page = Number(query?.page) || 1;
+    const take = Number(query.perPage) || 10;
+    const page = Number(query.page) || 1;
     const skip = (page - 1) * take;
+
+    console.log({ take, page, skip });
 
     return await this.mediaRepository.findAndCount({ take, skip });
   }

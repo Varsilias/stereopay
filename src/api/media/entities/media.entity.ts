@@ -8,8 +8,9 @@ import {
   DeleteDateColumn,
 } from 'typeorm';
 
-import { MediaType, StatusType } from 'src/common/helpers/enum';
+import { MediaType, StatusType } from '../../../common/helpers/enum';
 import { Exclude } from 'class-transformer';
+import { Factory } from 'nestjs-seeder';
 
 @Entity({ name: 'media' })
 export class MediaEntity {
@@ -17,15 +18,19 @@ export class MediaEntity {
   @Generated('uuid')
   id: string;
 
+  @Factory(() => MediaType.IMAGE)
   @Column('enum', { enum: MediaType })
   type: string;
 
+  @Factory((faker) => faker.lorem.words())
   @Column()
   name: string;
 
+  @Factory((faker) => faker.lorem.sentence(20))
   @Column()
   description: string;
 
+  @Factory((faker) => faker.image.cats())
   @Column()
   url: string;
 

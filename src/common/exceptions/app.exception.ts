@@ -1,6 +1,5 @@
 import { HttpStatus } from '@nestjs/common';
 import { CustomException } from './custom-exception';
-import { AppStatus } from '../helpers/enum';
 
 export class AppException extends CustomException {
   constructor(

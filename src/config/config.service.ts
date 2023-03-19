@@ -3,8 +3,8 @@ import * as fs from 'fs';
 import * as Joi from 'joi';
 import * as dotenv from 'dotenv';
 import * as path from 'path';
-import { AppException } from 'src/common/exceptions/app.exception';
-import { AppStatus } from 'src/common/helpers/enum';
+import { AppException } from '../common/exceptions/app.exception';
+import { AppStatus } from '../common/helpers/enum';
 
 interface EnvConfig {
   [prop: string]: string;
