@@ -1,0 +1,760 @@
+{
+	"info": {
+		"_postman_id": "5aefca4e-9230-4dac-8599-125ba3caf049",
+		"name": "Stereopay",
+		"description": "## Stereopay Task Assessment\n\n#### BaseURL: {{base_url}}\n\n### Documentation\n\nThis document specifies the documentation for all the Application Programming Interface Endpoints that the Backend of this Web Application provide.\n\n### Environment\n\nThere are multiple environments and with each environment comes with its **Environment Variable.**\n\nFrontend Developers viewing this **docs** can easily switch between environments and have the necessary parameters automatically placed for them.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10967402"
+	},
+	"item": [
+		{
+			"name": "Media",
+			"item": [
+				{
+					"name": "Get Media",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/media?page=2&perPage=12",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"media"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "perPage",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Success - Get Media",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/media?page=2&perPage=12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"media"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "perPage",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4630"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1216-XMU06imeygF0uAZnm7dJGI6nM5w\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:52:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Request Successful\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": \"2c0fc398-c8e9-4afe-a1e9-9e36275e4a61\",\n                \"type\": \"IMAGE\",\n                \"name\": \"maxime non commodi\",\n                \"description\": \"Deleniti animi architecto excepturi provident voluptate esse enim quas optio adipisci magnam magni aut quod voluptas alias alias incidunt rem.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"30b870bb-ccd3-4545-8a75-2542070534e1\",\n                \"type\": \"IMAGE\",\n                \"name\": \"magnam quae ex\",\n                \"description\": \"Facilis saepe odio doloremque non quae eius quam veritatis sapiente doloribus sequi ipsum exercitationem quaerat illo corrupti laborum dolores sint.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"3522ff1f-0dd8-44f9-8a6d-8568ca38dcdb\",\n                \"type\": \"IMAGE\",\n                \"name\": \"totam tempora laudantium\",\n                \"description\": \"Sed voluptatibus accusantium natus aperiam voluptates esse officiis possimus corrupti recusandae laboriosam maiores voluptates in eum voluptates unde nam praesentium.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"3564115b-da95-4005-af35-6bb3828136c2\",\n                \"type\": \"IMAGE\",\n                \"name\": \"dolores dolorem iure\",\n                \"description\": \"Eius vel iure porro nemo nulla recusandae consectetur quia laboriosam commodi in ipsa sunt magnam doloribus sit vero odio iste.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"35f227e1-eccc-4a19-9e71-6daa3feab592\",\n                \"type\": \"IMAGE\",\n                \"name\": \"exercitationem tempore consequuntur\",\n                \"description\": \"Distinctio commodi ut iure saepe facere quae aspernatur soluta sed dignissimos facilis quas doloribus sapiente iste fugiat tempora veniam hic.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"3f447b3e-fc2f-41fe-a0c7-40cef4558586\",\n                \"type\": \"IMAGE\",\n                \"name\": \"sequi porro voluptatibus\",\n                \"description\": \"Modi ipsa nisi at molestiae amet quod magni cumque quam voluptate debitis tenetur ipsam dolore reprehenderit similique officiis dolorem rerum.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"421048e7-0d9b-4504-affc-bd031dccb99c\",\n                \"type\": \"IMAGE\",\n                \"name\": \"Image name\",\n                \"description\": \"Image description\",\n                \"url\": \"https://startapi.artsplit.com/api/v1\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T01:51:27.894Z\",\n                \"updatedAt\": \"2023-03-19T01:51:27.894Z\"\n            },\n            {\n                \"id\": \"44da226f-cc0e-460f-a1c2-303e8447a340\",\n                \"type\": \"IMAGE\",\n                \"name\": \"possimus doloremque suscipit\",\n                \"description\": \"Autem reprehenderit delectus facere quibusdam nobis et aperiam ipsa atque ab sint sit minus officia sapiente itaque nostrum quis harum.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"470f1210-c497-45ed-96e8-525a20287451\",\n                \"type\": \"IMAGE\",\n                \"name\": \"corrupti voluptatem corrupti\",\n                \"description\": \"Dicta quibusdam molestiae occaecati ipsa natus deserunt ducimus porro pariatur rem tenetur molestias tempora accusamus beatae at occaecati consequuntur excepturi.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"507e2fba-5feb-40f2-bc93-1eda0f570161\",\n                \"type\": \"IMAGE\",\n                \"name\": \"id doloremque accusamus\",\n                \"description\": \"Dolorum earum repellat voluptate magni incidunt id voluptate itaque quod dolorum omnis voluptatem neque enim illum labore sunt inventore ab.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"66d6f528-ff5f-4dc9-9d80-a0fcfba80e38\",\n                \"type\": \"IMAGE\",\n                \"name\": \"accusamus omnis exercitationem\",\n                \"description\": \"A numquam nemo necessitatibus mollitia possimus non tempora unde qui soluta in magnam dolor molestias aspernatur quasi eos voluptas molestias.\",\n                \"url\": \"https://loremflickr.com/640/480/cats\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n                \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n            },\n            {\n                \"id\": \"6844ba0f-143f-4c70-bf0b-a2bcf569fdba\",\n                \"type\": \"AUDIO\",\n                \"name\": \"NFT Music\",\n                \"description\": \"NFT music was created afterwards\",\n                \"url\": \"https://frontendmentor.io\",\n                \"status\": \"ACTIVE\",\n                \"createdAt\": \"2023-03-19T14:52:19.415Z\",\n                \"updatedAt\": \"2023-03-19T14:52:19.415Z\"\n            }\n        ],\n        \"count\": 57,\n        \"currentPage\": 2,\n        \"nextPage\": 3,\n        \"prevPage\": 1,\n        \"lastPage\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Media by Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/media/3522ff1f-0dd8-44f9-8a6d-8568ca38dcdb",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"media",
+								"3522ff1f-0dd8-44f9-8a6d-8568ca38dcdb"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request - Get Media by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/media/c1241502-3ce6-4fe3-8aac-602fb0aede82",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"media",
+										"c1241502-3ce6-4fe3-8aac-602fb0aede82"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "106"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6a-dlMqzMin0+OykMjagl3g5JTtZV4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 16:35:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"media with id c1241502-3ce6-4fe3-8aac-602fb0aede82 does not exist\",\n    \"data\": {}\n}"
+						},
+						{
+							"name": "200 Success - Get Media by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/media/3522ff1f-0dd8-44f9-8a6d-8568ca38dcdb",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"media",
+										"3522ff1f-0dd8-44f9-8a6d-8568ca38dcdb"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "477"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1dd-Xk5O7JQU/+v7YWpmVkyT2BWt82o\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 16:38:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Request Successful\",\n    \"data\": {\n        \"id\": \"3522ff1f-0dd8-44f9-8a6d-8568ca38dcdb\",\n        \"type\": \"IMAGE\",\n        \"name\": \"totam tempora laudantium\",\n        \"description\": \"Sed voluptatibus accusantium natus aperiam voluptates esse officiis possimus corrupti recusandae laboriosam maiores voluptates in eum voluptates unde nam praesentium.\",\n        \"url\": \"https://loremflickr.com/640/480/cats\",\n        \"status\": \"ACTIVE\",\n        \"createdAt\": \"2023-03-19T14:42:56.587Z\",\n        \"updatedAt\": \"2023-03-19T14:42:56.587Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Media Status",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"ACTIVE\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/media/c1241502-3ce6-4fe3-8aac-602fb0aede82",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"media",
+								"c1241502-3ce6-4fe3-8aac-602fb0aede82"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Success - Update Media Status",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"ACTIVE\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/media/c1241502-3ce6-4fe3-8aac-602fb0aede82",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"media",
+										"c1241502-3ce6-4fe3-8aac-602fb0aede82"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"65-ETZyh7CwhNMo91mlWO8YhebDmoQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 14:24:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Request Successful\",\n    \"data\": {\n        \"generatedMaps\": [],\n        \"raw\": [],\n        \"affected\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Soft Delete Media",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/media/c1241502-3ce6-4fe3-8aac-602fb0aede82",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"media",
+								"c1241502-3ce6-4fe3-8aac-602fb0aede82"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Success - Soft Delete Media",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/media/c1241502-3ce6-4fe3-8aac-602fb0aede82",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"media",
+										"c1241502-3ce6-4fe3-8aac-602fb0aede82"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"65-ETZyh7CwhNMo91mlWO8YhebDmoQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 14:28:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Request Successful\",\n    \"data\": {\n        \"generatedMaps\": [],\n        \"raw\": [],\n        \"affected\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Search Media",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/media/search?query=media",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"media",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "media"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Success - Search Media",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/media/search?query=media",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"media",
+										"search"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "media"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1056"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"420-+yEscTIRpKkZ8wX3JjSanvFXT7U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 14:25:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Request Successful\",\n    \"data\": [\n        {\n            \"id\": \"140d3923-3fa9-4d1f-968d-fa2e19bd77bd\",\n            \"type\": \"AUDIO\",\n            \"name\": \"Media name\",\n            \"description\": \"Media description\",\n            \"url\": \"https://localhost:8000/api/v1\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2023-03-19T01:45:34.000Z\",\n            \"updatedAt\": \"2023-03-19T01:45:34.000Z\"\n        },\n        {\n            \"id\": \"14cbb55e-ff35-4154-ac0f-44e9eb50318e\",\n            \"type\": \"AUDIO\",\n            \"name\": \"Media name\",\n            \"description\": \"Media description\",\n            \"url\": \"https://localhost:8000/api/v1\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2023-03-19T01:40:53.078Z\",\n            \"updatedAt\": \"2023-03-19T01:40:53.078Z\"\n        },\n        {\n            \"id\": \"c1241502-3ce6-4fe3-8aac-602fb0aede82\",\n            \"type\": \"AUDIO\",\n            \"name\": \"Media name\",\n            \"description\": \"Media description\",\n            \"url\": \"https://localhost:8000/api/v1\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2023-03-19T01:37:59.291Z\",\n            \"updatedAt\": \"2023-03-19T13:24:51.000Z\"\n        },\n        {\n            \"id\": \"ef118473-80eb-46e0-a931-3185dec6cc77\",\n            \"type\": \"AUDIO\",\n            \"name\": \"Media name\",\n            \"description\": \"Media description\",\n            \"url\": \"https://localhost:8000/api/v1\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2023-03-19T01:35:43.682Z\",\n            \"updatedAt\": \"2023-03-19T01:35:43.682Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Media",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"AUDIO\",\n    \"name\": \"NFT Music\",\n    \"description\": \"NFT music was created afterwards\",\n    \"url\": \"https://frontendmentor.io\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/media",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"media"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Success - Create Media",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"AUDIO\",\n    \"name\": \"NFT Music\",\n    \"description\": \"NFT music was created afterwards\",\n    \"url\": \"https://frontendmentor.io\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/media",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"media"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "334"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14e-So1011CVTHtmpOuy9UHfSgTZo/Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:52:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Request Successful\",\n    \"data\": {\n        \"type\": \"AUDIO\",\n        \"name\": \"NFT Music\",\n        \"description\": \"NFT music was created afterwards\",\n        \"url\": \"https://frontendmentor.io\",\n        \"deletedAt\": null,\n        \"id\": \"6844ba0f-143f-4c70-bf0b-a2bcf569fdba\",\n        \"status\": \"ACTIVE\",\n        \"createdAt\": \"2023-03-19T14:52:19.415Z\",\n        \"updatedAt\": \"2023-03-19T14:52:19.415Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "The endpoints listed in this folder allows for our main users to easily authenticated and use our application"
+		}
+	]
+}
