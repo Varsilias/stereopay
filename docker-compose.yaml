@@ -30,8 +30,6 @@ services:
       ADMINER_DEFAULT_SERVER: mysql
       ADMINER_DESIGN: galkaev
 
-    # volumes:
-    #   - /data/pgadmin:/root/.pgadmin
     env_file:
       - .env
 

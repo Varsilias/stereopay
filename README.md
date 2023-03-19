@@ -1,73 +1,45 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+## StereoPay Task Assessment
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+There are 2 ways to setup this project on your Machine
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- With Docker
+- Without Docker
 
-## Description
+### Setup Instructions - Without Docker
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+_NB:_ **This setup assumes that you have some kind of MySQL database visualizer installed on your machine an example would be `Sequel Pro`, `MySQL Workbench` or `PhpMyAdmin`**
 
-## Installation
+**Also these tools work with a locally installed version of a `mysql server` which runs in the background**
 
-```bash
-$ npm install
-```
+[Checkout this link on how to install Xampp & PhpMyAdmin](https://www.wikihow.com/Install-XAMPP-for-Windows)
 
-## Running the app
+1. Open your terminal and clone this project by running the command `git clone
+git@github.com:danielokoronkwo-coder/stereopay.git`
+2. Navigate into the project folder by running the command `cd stereopay`
+3. Create a .env file by copying the contents of `.env.example` to `.env`. run the command `npm run cp:env` or `yarn cp:env`
+4. If **3** above does not work manually create the .env file at the root of the project folder and proceed to copy the contents of the `.env.example` file into your newly created `.env` file
+5. Fill the rest of the credentials in the **Database** section of the `.env` file with your Database credentials
+6. Run `npm install` or `yarn` to install all the project dependencies
+7. Start the local development server by running the command `yarn start:dev` or `npm run start:dev`
+8. If everything goes as planned your database will have a new table named **media** created automatically in the database you created earlier
+9. Seed the database with test data by running the command `npm run seed` or `yarn seed`
+10. Sip your coffee while you test.
 
-```bash
-# development
-$ npm run start
+### Setup Instructions - With Docker
 
-# watch mode
-$ npm run start:dev
+_NB:_ **This setup assumes that you have Docker and Docker compose installed on your machine**
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+1. Open your terminal and clone this project by running the command `git clone
+git@github.com:danielokoronkwo-coder/stereopay.git`
+2. Navigate into the project folder by running the command `cd stereopay`
+3. Create a .env file by copying the contents of `.env.example` to `.env`. run the command `npm run cp:env` or `yarn cp:env`
+4. If **3** above does not work manually create the .env file at the root of the project folder and proceed to copy the contents of the `.env.example` file into your newly created `.env` file
+5. Fill the rest of the credentials in the **Database** section of the `.env` file with your Database credentials
+6. Take note of the credentials you added, you will need in later stages of this setup
+7. Run the command `docker compose up` to boot up the **MySQL server(database)** and **adminer**, this command will take a while depending on the speed of your machine and the strength of your network
+8. If all went well login to **ADMINER** by visiting **http://localhost:8080** in your browser of choice and login with the **credentials** you filled in the `.env` file earlier
+9. Back to the project directory, run `npm install` or `yarn` to install all the project dependencies
+10. Start the local development server by running the command `yarn start:dev` or `npm run start:dev`
+11. If everything goes as planned(local development server starts successfully) when you **refresh** the **adminer** page you will have a new table named **media** created automatically
+12. Seed the database with test data by running the command `npm run seed` or `yarn seed`
+13. Sip your coffee while you test.
